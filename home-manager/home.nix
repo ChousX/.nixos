@@ -17,6 +17,7 @@
       firefox
       wezterm
       vlc
+      git-credential-manager
     ];
     file = {
       ".emacs.d".source = ./configs/emacs;
