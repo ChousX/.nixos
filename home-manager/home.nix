@@ -94,7 +94,7 @@
       shellAliases = {
         update = "sudo nixos-rebuild switch --flake ~/.nixos/.";
         update-home = "home-manager switch --flake ~/.nixos/.";
-        bevy-init = "nix flake new --template ~/Templates#rust-bevy .";
+        bevy-init = "nix flake new --template ~/Templates#rust-bevy . && sh init.sh";
         v = "nvim";
       };
     };
