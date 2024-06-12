@@ -4,7 +4,7 @@
   inputs = {
     # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    # Also see the 'unstable-packages' overlay at 'overlays/default.nix'.
+    nur.url = "github:nix-community/NUR";
 
     # Home manager
     home-manager.url = "github:nix-community/home-manager/master";
