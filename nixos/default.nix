@@ -8,7 +8,7 @@
 }: {
   imports = [
     ./base.nix
-    ./bluetooth.nix
+    ./bt.nix
     ./default-user.nix
     ./kde.nix
     ./localization.nix
