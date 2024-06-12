@@ -17,6 +17,7 @@
       firefox
       wezterm
       vlc
+      git-credential-oauth
     ];
     file = {
       ".emacs.d".source = ./configs/emacs;
@@ -91,7 +92,7 @@
       shellAliases = {
         update = "sudo nixos-rebuild switch --flake ~/.nixos/.";
         update-home = "home-manager switch --flake ~/.nixos/.";
-        bevy-init = "nix flake new --template github:graysonhead/nix-templates#rust-bevy .";
+        bevy-init = "nix flake new --template ~/Templates#rust-bevy .";
         v = "nvim";
       };
     };
