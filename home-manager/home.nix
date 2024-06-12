@@ -18,6 +18,7 @@
       wezterm
       vlc
       git-credential-manager
+      github-cli
     ];
     file = {
       ".emacs.d".source = ./configs/emacs;
