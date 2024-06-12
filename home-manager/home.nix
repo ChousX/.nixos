@@ -17,7 +17,6 @@
       firefox
       wezterm
       vlc
-      git-credential-oauth
     ];
     file = {
       ".emacs.d".source = ./configs/emacs;
@@ -38,10 +37,11 @@
       enable = true;
       userName = "ChousX";
       userEmail = "gmanenergy@gmail.com";
+      extraConfig.credential.helper = "oauth";
       aliases = {
         pu = "push";
 	      co = "checkout";
-	      cm = "commit";
+	      cm = "commit -m";
       };
     };
 
