@@ -142,22 +142,22 @@
                 behavior = cmp.ConfirmBehavior.Insert,
                 select = true,
               }),
-	    },
-	    sources = {
-	      {name = "nvim_lsp" },
-	      {name = "vsnip" },
-	      {name = "path" },
-	      {name = "buffer" },
-	    },
-	  })
-	'';
+	        },
+	        sources = {
+	          {name = "nvim_lsp" },
+	          {name = "vsnip" },
+	          {name = "path" },
+	          {name = "buffer" },
+	        },
+	      })
+	    '';
       }
 
       {
-      plugin = fidget-nvim;
-      config = toLua ''
-        require("fidget").setup{}
-      '';
+        plugin = fidget-nvim;
+        config = toLua ''
+          require("fidget").setup{}
+        '';
       }
       popup-nvim
       plenary-nvim
