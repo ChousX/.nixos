@@ -1,8 +1,11 @@
 { config, outputs, pkgs, ... }:
 {
-  nixpkgs.overlays = [
-    outputs.overlays.nvimPlugins
-  ];
+  nixpkgs = {
+    overlays =  [
+      outputs.overlays.nvimPlugins
+    ];
+    config.allowUnfree = true;
+  };
 
   imports = [./neovim.nix];
 
@@ -18,6 +21,7 @@
       wezterm
       vlc
       git-credential-manager
+      discord
       github-cli
     ];
     file = {
