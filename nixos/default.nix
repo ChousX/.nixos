@@ -14,6 +14,7 @@
     ./networking.nix
     ./sddm.nix
     ./sound.nix
+    ./ssh.nix
     ./zsh.nix
   ];
 
