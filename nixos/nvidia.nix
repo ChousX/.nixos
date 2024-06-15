@@ -4,14 +4,14 @@
   hardware.opengl = {
     enable = true;
     driSupport = true;
-    dirSupport32Bit = true;
+    #dirSupport32Bit = true;
   };
 
   # loading nvidia drivers for graphics server
   services.xserver.videoDrivers = ["nvidia"];
 
   hardware.nvidia = {
-    modestting.enable = true;
+    modesetting.enable = true;
     powerManagement.enable = false;
     open = false;
     nvidiaSettings = true;
