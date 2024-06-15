@@ -10,9 +10,14 @@ services.xserver.desktopManager.plasma5.enable = true;
   #oxygen
 #];
 
+environment.systemPackages = with pkgs.kdePackages; [
+  audiotube
+];
 
-programs.kdeconnect = {
+programs.kdeconnect = { 
   enable = true;
+   
 };
+
 
 }
