@@ -60,6 +60,7 @@
           ./nixos/vonwyn-hc.nix
           ./nixos/vonwyn.nix
           ./nixos/grub-boot.nix
+          ./nixos/nvidia.nix
         ];
       };
     };
