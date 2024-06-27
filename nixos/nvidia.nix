@@ -3,7 +3,7 @@
   # Enable OpenGl
   hardware.opengl = {
     enable = true;
-    driSupport = true;
+    #driSupport = true;
     #dirSupport32Bit = true;
   };
 
