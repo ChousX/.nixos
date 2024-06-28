@@ -48,7 +48,7 @@
       aliases = {
         pu = "push";
 	      co = "checkout";
-	      cm = "commit -m -a";
+	      cm = "commit -a -m";
       };
     };
 
