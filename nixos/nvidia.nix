@@ -1,11 +1,6 @@
 {config, lib, pkgs, ...}:
 {
-  # Enable OpenGl
-  hardware.opengl = {
-    enable = true;
-    #driSupport = true;
-    #dirSupport32Bit = true;
-  };
+  hardware.graphics.enable = true;
 
   # loading nvidia drivers for graphics server
   services.xserver.videoDrivers = ["nvidia"];
