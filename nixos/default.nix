@@ -12,7 +12,6 @@
     ./default-user.nix
     ./kde.nix
     ./localization.nix
-    ./networking.nix
     ./sddm.nix
     ./sound.nix
     ./ssh.nix
