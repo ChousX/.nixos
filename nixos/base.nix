@@ -1,6 +1,7 @@
 {...}:
 {
   xdg.portal.enable = true;
+  networking.networkmanager.enable = true;
   services = {
     printing.enable = true;
     flatpak.enable = true;

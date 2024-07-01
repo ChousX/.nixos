@@ -50,7 +50,7 @@
           ./nixos
           ./nixos/oric-hc.nix
           ./nixos/systemd-boot.nix
-          ./nixos/oric_network.nix
+          ./nixos/oric.nix
         ];
       };
 
@@ -62,7 +62,6 @@
           ./nixos/vonwyn.nix
           ./nixos/grub-boot.nix
           ./nixos/nvidia.nix
-          ./nixos/vonwyn_network.nix
         ];
       };
     };
