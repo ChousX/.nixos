@@ -6,7 +6,8 @@
     ../base.nix
     ./hardware-configuration.nix
     ./boot.nix
-    ../kde.nix
+    #../kde.nix
+    ../hyprland.nix
   ];
 
 }
