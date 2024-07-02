@@ -13,7 +13,8 @@
     noto-fonts
     noto-fonts-emoji
     proggyfonts
-
+    roboto
+    helvetica
   ];
 }
         
