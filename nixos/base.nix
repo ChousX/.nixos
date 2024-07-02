@@ -3,6 +3,7 @@
   imports = [
     ./default-user.nix
     ./localization.nix
+    ./bluetooth.nix
     ./ssh.nix
     ./zsh.nix
     ./sound.nix
