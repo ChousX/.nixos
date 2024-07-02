@@ -10,6 +10,7 @@
   imports = [
     ./neovim.nix
     ./hyperland.nix
+    ./fonts.nix
   ];
 
   home = { 
