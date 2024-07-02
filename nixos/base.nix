@@ -7,6 +7,7 @@
     ./ssh.nix
     ./zsh.nix
     ./sound.nix
+    ./fonts.nix
   ];
 
   xdg.portal.enable = true;
