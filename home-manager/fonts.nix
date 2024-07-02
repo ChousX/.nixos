@@ -1,8 +1,6 @@
 {pkgs, ...} : {
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
-    arial
-    sans-serif
     font-awesome
     fira-code
     fira-code-symbols
@@ -14,7 +12,7 @@
     noto-fonts-emoji
     proggyfonts
     roboto
-    helvetica
+    helvetica-neue-lt-std
   ];
 }
         

@@ -27,6 +27,8 @@
       git-credential-manager
       discord
       github-cli
+      bat
+      ripgrep
     ];
     file = {
       ".emacs.d".source = ./configs/emacs;
