@@ -44,5 +44,14 @@
     nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
   };
 
+  environment.systemPackages = with pkgs; [
+    starship
+    bat
+    git
+    ripgrep
+    vlc
+    alacritty
+  ];
+
   system.stateVersion = "23.11";
 }
