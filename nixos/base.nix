@@ -23,7 +23,7 @@
       outputs.overlays.nvimPlugins
     ];
     config.allowUnfree = true;
-  }
+  };
 
   nix = let
     flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
