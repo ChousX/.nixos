@@ -54,8 +54,7 @@
     grim
     slurp
 
-    # --Overlays Bars and more--
-    waybar
+    # --Overlays--
     wlogout
     # --Application Grid--
     nwg-drawer
