@@ -20,6 +20,8 @@
         "$mod, Return, exec, $term"
         "$mod SHIFT, Q, killactive"
         "$mod, F, exec, firefox"
+        "$mod, R, exec, rofi -show run"
+        "$mod SHIFT, Delete, exec, hyprctl dispatch exit"
       ] ++ (
         builtins.concatLists (builtins.genList (
           x: let
