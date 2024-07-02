@@ -1,9 +1,12 @@
 {pkgs, ...}: {
+  imports = [
+    ./waybar.nix
+  ];
+
   xdg.portal = {
     extraPortals = [ pkgs.inputs.hyprland.xdg-desktop-portal-hyprland ];
     configPackages = [ pkgs.inputs.hyprland.hyprland ];
   };
-
 
   wayland.windowManager.hyprland = {
     enable = true;
@@ -34,4 +37,28 @@
       );
     };
   };
+
+  home.packages = with pkgs; [
+    # --Utility to manage outputs of a Wayland compositor (aka xrandr but wayland)--
+    wlr-randr
+    brightnessctl
+    # --A simple notification daemon with a GTK gui --
+    swaynotificationcenter
+    # --pulseaudio command line mixer--
+    pamixer
+    networkmanagerapplet
+    playerctl
+    # --Compositor--
+    swww
+    # --Screenshots--
+    grim
+    slurp
+
+    # --Overlays Bars and more--
+    waybar
+    wlogout
+    # --Application Grid--
+    nwg-drawer
+  ];
+
 }
