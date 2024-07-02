@@ -7,9 +7,5 @@
   programs.waybar = {
     enable = true;
     systemd.enable = true;
-    settings = [{
-      modules = {};
-      modules-left = ["river/tags"];
-    }];
   };
 }
