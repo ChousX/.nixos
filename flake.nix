@@ -47,21 +47,14 @@
       Oric = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
-          ./nixos
-          ./nixos/oric-hc.nix
-          ./nixos/systemd-boot.nix
-          ./nixos/oric.nix
+          ./nixos/oric
         ];
       };
 
       Vonwyn = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
-          ./nixos
-          ./nixos/vonwyn-hc.nix
-          ./nixos/vonwyn.nix
-          ./nixos/grub-boot.nix
-          ./nixos/nvidia.nix
+          ./nixos/vonwyn
         ];
       };
     };
