@@ -1,5 +1,6 @@
 {pkgs, ...}: {
-  file = {
+
+  home.file = {
     ".config/waybar/".source = ./configs/waybar;
   };
 
