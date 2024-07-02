@@ -32,4 +32,6 @@
     # --Application Grid--
     nwg-drawer
   ];
+
+  wayland.windowManager.hyprland.systemd.variables = ["--all"];
 }
