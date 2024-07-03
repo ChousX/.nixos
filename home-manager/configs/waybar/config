@@ -1,8 +1,8 @@
 {
-    "modules-left": ["clock", ],
-    "modules-center": ["clock", "idle_inhibitor"],
+    "modules-left": ["clock", "network", ],
+    /* "modules-center": ["clock", "idle_inhibitor"],
     /* "modules-right": ["tray", "custom/scratchpad-indicator", "pulseaudio", "custom/power"], */
-    "modules-right": ["tray", "pulseaudio", "network", "idle_inhibitor"],
+    "modules-right": ["tray", "pulseaudio",  "idle_inhibitor"],
 
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
