@@ -1,3 +1,6 @@
 {...}: {
-  fonts.fontDir.enable = true;
+  fonts = {
+    fontconfig.enable = true;
+    fontDir.enable = true;
+  };
 }

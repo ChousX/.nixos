@@ -27,6 +27,10 @@
       git-credential-manager
       discord
       github-cli
+      bat
+      ripgrep
+      dust
+      tldr
     ];
     file = {
       ".emacs.d".source = ./configs/emacs;
@@ -38,7 +42,6 @@
     };
   };
 
-  fonts.fontconfig.enable = true;
 
   services.ssh-agent.enable = true;
   programs = {

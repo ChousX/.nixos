@@ -1,4 +1,9 @@
 {pkgs, ...}: {
+
+  home.file = {
+    ".config/waybar".source = ./configs/waybar;
+  };
+
   home.packages = with pkgs; [
     playerctl    
     pavucontrol
