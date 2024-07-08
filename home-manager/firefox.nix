@@ -1,7 +1,6 @@
-{...} : {
+{environment, ...} : {
   programs.firefox.enable = true;
-  environment
-  environment.variables = {
+  home.sessionVariables = {
     MOZ_ENABLE_WAYLAND = 0;
   };
 }
