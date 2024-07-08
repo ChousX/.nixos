@@ -1,9 +1,8 @@
 {pkgs, ...} : {
-<<<<<<< HEAD
   #fonts.fontconfig.enable = true;
 
   #home.packages = with pkgs; [
-    nerdfonts
+    #nerdfonts
     #noto-fonts
     #noto-fonts-cjk
     #noto-fonts-emoji
@@ -14,7 +13,6 @@
     #dina-font
     #proggyfonts
   #];
-=======
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
     font-awesome
@@ -30,6 +28,5 @@
     roboto
     helvetica-neue-lt-std
   ];
->>>>>>> 7198ec4f1303203930699689a0ca2afa457dc285
 }
         
