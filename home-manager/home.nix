@@ -11,6 +11,7 @@
     ./neovim.nix
     ./hyperland.nix
     ./fonts.nix
+    ./firefox.nix
   ];
 
   home = { 
@@ -21,7 +22,6 @@
       signal-desktop
       open-dyslexic
       fantasque-sans-mono
-      firefox
       wezterm
       vlc
       git-credential-manager
@@ -93,11 +93,6 @@
     starship = {
       enable = true;
     };
-
-    firefox = {
-      enable = true;
-    };
-
     zsh = {
       enable = true;
       enableCompletion = true;
