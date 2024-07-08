@@ -12,6 +12,7 @@
     ./hyperland.nix
     ./fonts.nix
     ./firefox.nix
+    ./alacritty.nix
   ];
 
   home = { 
@@ -81,18 +82,21 @@
       ];
     };
 
-    alacritty = {
-      enable = true;
-    };
-
     rofi = {
       enable = true;
       location = "center";
+      cycle = true;
+      plugins = [
+          pkgs.rofi-calc
+          pkgs.rofi-emoji
+          pkgs.rofi-systemd
+        ];
     };
 
     starship = {
       enable = true;
     };
+
     zsh = {
       enable = true;
       enableCompletion = true;
