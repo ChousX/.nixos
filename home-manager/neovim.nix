@@ -102,8 +102,8 @@
       '';
 
     plugins = with pkgs.vimPlugins; [
-      #mason-nvim
-      #mason-lspconfig-nvim
+      mason-nvim
+      mason-lspconfig-nvim
       nvim-lspconfig
       cmp-nvim-lsp
       cmp-vsnip
