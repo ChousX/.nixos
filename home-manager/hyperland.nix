@@ -41,7 +41,8 @@
     systemd = {
       variables = ["--all"];
       extraCommands = [
-        "swww-deamon"
+        "swww init"
+        #"swww-deamon"
         "swww img $WALLPAPER"
       ];
     };
