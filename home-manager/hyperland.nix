@@ -38,6 +38,13 @@
         )
       );
     };
+    systemd = {
+      variables = ["--all"];
+      extraCommands = [
+        "swww-deamon"
+        "swww img $WALLPAPER"
+      ];
+    };
   };
 
   home.packages = with pkgs; [
@@ -61,5 +68,9 @@
     # --Application Grid--
     nwg-drawer
   ];
+
+  home.sessionVariables = {
+    WALLPAPER = "/home/chousx/.nixos/wallpaper-1.jpg";
+  };
 
 }

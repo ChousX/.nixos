@@ -52,6 +52,7 @@
     vlc
     alacritty
   ];
+  
 
   system.stateVersion = "23.11";
 }
