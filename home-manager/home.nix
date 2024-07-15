@@ -13,6 +13,7 @@
     ./fonts.nix
     ./firefox.nix
     ./alacritty.nix
+    ./plasma-manager.nix
   ];
 
   home = { 
@@ -27,6 +28,7 @@
       vlc
       git-credential-manager
       discord
+      vesktop
       github-cli
       bat
       ripgrep
