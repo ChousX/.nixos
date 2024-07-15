@@ -27,6 +27,7 @@
       vlc
       git-credential-manager
       discord
+      vesktop
       github-cli
       bat
       ripgrep
