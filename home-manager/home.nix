@@ -13,6 +13,7 @@
     ./fonts.nix
     ./firefox.nix
     ./alacritty.nix
+    ./plasma-manager.nix
   ];
 
   home = { 
