@@ -1,10 +1,6 @@
 { pkgs, ... }:
 
 {
-  imports = [
-    <plasma-manager/modules>
-  ];
-
   programs.plasma = {
 
     # Some high-level settings:
@@ -55,13 +51,13 @@
 
       kwin = {
         "Expose" = "Meta+,";
-        "Switch Window Down" = "Meta+J";
+        #"Switch Window Down" = "Meta+J";
         "Switch Window Down" = "Meta+Down";
-        "Switch Window Left" = "Meta+H";
+        #"Switch Window Left" = "Meta+H";
         "Switch Window Left" = "Meta+Left";
-        "Switch Window Right" = "Meta+L";
+        #"Switch Window Right" = "Meta+L";
         "Switch Window Right" = "Meta+Right";
-        "Switch Window Up" = "Meta+K";
+        #"Switch Window Up" = "Meta+K";
         "Switch Window Up" = "Meta+Up";
       };
     };
