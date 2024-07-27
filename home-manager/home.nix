@@ -34,6 +34,7 @@
       ripgrep
       dust
       tldr
+      aseprite
     ];
     file = {
       ".emacs.d".source = ./configs/emacs;
@@ -108,6 +109,10 @@
         bevy-init = "nix flake new --template ~/Templates#rust-bevy . && sh init.sh";
         v = "nvim";
       };
+    };
+
+    ranger = {
+      enable = true;
     };
   };
 
