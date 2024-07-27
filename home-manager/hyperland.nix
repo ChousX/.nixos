@@ -38,14 +38,14 @@
         )
       );
     };
-    systemd = {
-      variables = ["--all"];
-      extraCommands = [
-        "swww init"
+    #systemd = {
+      #variables = ["--all"];
+      #extraCommands = [
+        #"swww init"
         #"swww-deamon"
-        "swww img $WALLPAPER"
-      ];
-    };
+        #"swww img $WALLPAPER"
+      #];
+    #};
   };
 
   home.packages = with pkgs; [

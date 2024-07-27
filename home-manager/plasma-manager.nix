@@ -1,6 +1,10 @@
 { pkgs, ... }:
 
 {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8692dc5db11ca8d4177a7d00360c47115cdcf4f7
   programs.plasma = {
 
     # Some high-level settings:
