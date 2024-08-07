@@ -35,6 +35,7 @@
       dust
       tldr
       aseprite
+      unrar
     ];
     file = {
       ".emacs.d".source = ./configs/emacs;
