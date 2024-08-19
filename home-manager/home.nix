@@ -36,6 +36,7 @@
       tldr
       aseprite
       unrar
+      filezilla
     ];
     file = {
       ".emacs.d".source = ./configs/emacs;
