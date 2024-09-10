@@ -26,6 +26,7 @@
     noto-fonts-emoji
     proggyfonts
     roboto
+    open-dyslexic
     helvetica-neue-lt-std
   ];
 }
