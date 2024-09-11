@@ -8,9 +8,9 @@
     enable = true;
   };
 
-  home.packages = [
-    pkgs.vesktop
-  ];
+  #home.packages = [
+    #pkgs.vesktop
+  #];
 
   programs.waybar.enable = true;
 

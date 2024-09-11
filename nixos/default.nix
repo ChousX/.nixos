@@ -9,7 +9,6 @@
   imports = [
     ./bluetooth.nix
     ./default-user.nix
-    ./kde.nix
     ./localization.nix
     ./sddm.nix
     ./sound.nix
