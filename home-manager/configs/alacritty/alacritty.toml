@@ -6,3 +6,13 @@ padding.y = 0
 
 decorations = "Full"
 decorations_theme_variant = "Dark"
+
+
+[font]
+
+normal.family = "OpenDyslexicM"
+bold.family = "OpenDyslexicM"
+italic.family = "OpenDyslexicM"
+bold_italic.family = "OpenDyslexicM"
+
+size = 15.0
