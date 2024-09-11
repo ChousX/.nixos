@@ -22,8 +22,8 @@
     stateVersion = "23.11"; # Please read the comment before changing.
     packages = with pkgs; [
       signal-desktop
-      open-dyslexic
-      fantasque-sans-mono
+      #open-dyslexic
+      #fantasque-sans-mono
       wezterm
       vlc
       git-credential-manager
@@ -50,6 +50,7 @@
 
 
   services.ssh-agent.enable = true;
+
   programs = {
     home-manager.enable = true;
 
