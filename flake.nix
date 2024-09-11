@@ -1,5 +1,5 @@
 {
-  description = "Your new nix config";
+  description = "My Personal Use NixOs configuration";
 
   inputs = {
     # Nixpkgs
@@ -37,46 +37,46 @@
         "x86_64-linux"
         "aarch64-darwin"
         "x86_64-darwin"
-      ];
+        ];
       forAllSystems = nixpkgs.lib.genAttrs systems;
     in {
-    packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
+      packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
 
-    formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
+      formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
 
-    overlays = import ./overlays {inherit inputs;};
+      overlays = import ./overlays {inherit inputs;};
 
-    nixosModules = import ./modules/nixos;
+      nixosModules = import ./modules/nixos;
 
-    homeManagerModules = import ./modules/home-manager;
+      homeManagerModules = import ./modules/home-manager;
 
-    nixosConfigurations = {
-      Oric = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
-        modules = [
-          ./nixos/oric
-        ];
+      nixosConfigurations = {
+        Oric = nixpkgs.lib.nixosSystem {
+          specialArgs = {inherit inputs outputs;};
+          modules = [
+            ./nixos/oric
+          ];
+        };
+
+        Vonwyn = nixpkgs.lib.nixosSystem {
+          specialArgs = {inherit inputs outputs;};
+          modules = [
+            ./nixos/vonwyn
+          ];
+        };
       };
 
-      Vonwyn = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
-        modules = [
-          ./nixos/vonwyn
-        ];
+      # Standalone home-manager configuration entrypoint
+      homeConfigurations = {
+        chousx = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+          extraSpecialArgs = {inherit inputs outputs;};
+          modules = [
+            # > Our main home-manager configuration file <
+            ./home-manager
+            inputs.plasma-manager.homeManagerModules.plasma-manager
+          ];
+        };
       };
     };
-
-    # Standalone home-manager configuration entrypoint
-    homeConfigurations = {
-      chousx = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        extraSpecialArgs = {inherit inputs outputs;};
-        modules = [
-          # > Our main home-manager configuration file <
-          ./home-manager/home.nix
-          inputs.plasma-manager.homeManagerModules.plasma-manager
-        ];
-      };
-    };
-  };
 }
