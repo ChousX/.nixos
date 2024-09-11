@@ -7,8 +7,7 @@
   ...
 }: {
   imports = [
-    ./base.nix
-    ./bt.nix
+    ./bluetooth.nix
     ./default-user.nix
     ./kde.nix
     ./localization.nix
@@ -16,7 +15,16 @@
     ./sound.nix
     ./ssh.nix
     ./zsh.nix
+    ./fonts.nix
   ];
+
+  xdg.portal.enable = true;
+  networking.networkmanager.enable = true;
+
+  services = {
+    printing.enable = true;
+    flatpak.enable = true;
+  };
 
   nixpkgs = {
     overlays = [
@@ -43,4 +51,12 @@
     registry = lib.mapAttrs (_: flake: {inherit flake;}) flakeInputs;
     nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
   };
+
+  environment.systemPackages = with pkgs; [
+    bat
+    git
+    ripgrep
+  ];
+
+  system.stateVersion = "23.11";
 }
