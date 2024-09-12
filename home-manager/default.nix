@@ -12,7 +12,6 @@
     ./hyperland.nix
     ./fonts.nix
     ./firefox.nix
-    ./alacritty.nix
     ./plasma-manager.nix
   ];
 
@@ -22,8 +21,6 @@
     stateVersion = "23.11"; # Please read the comment before changing.
     packages = with pkgs; [
       signal-desktop
-      #open-dyslexic
-      #fantasque-sans-mono
       wezterm
       vlc
       git-credential-manager
@@ -37,6 +34,7 @@
       aseprite
       unrar
       filezilla
+      alacritty
     ];
     file = {
       ".emacs.d".source = ./configs/emacs;
