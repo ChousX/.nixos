@@ -9,10 +9,9 @@ decorations_theme_variant = "Dark"
 
 
 [font]
-"OpenDyslexicMNerdFontMono Regular"
-normal.family = "OpenDyslexicMNerdFontMono Regular"
-bold.family = "OpenDyslexicMNerdFontMono Regular"
-italic.family = "OpenDyslexicMNerdFontMono Regular"
-bold_italic.family = "OpenDyslexicMNerdFontMono Regular"
+normal.family = "OpenDyslexicM Nerd Font Mono"
+bold.family = "OpenDyslexicM Nerd Font Mono"
+italic.family = "OpenDyslexicM Nerd Font Mono"
+bold_italic.family = "OpenDyslexicM Nerd Font Mono"
 
 size = 15.0
