@@ -24,7 +24,7 @@
     };
 
     #NightlyFirefox
-    firefox-nightly = {
+    firefox = {
       url = "github:nix-community/flake-firefox-nightly";
       inputs.nixpkgs.follows = "nixpkgs";
     };
