@@ -10,7 +10,6 @@
   imports = [
     ./neovim.nix
     ./hyperland.nix
-    ./fonts.nix
     ./firefox.nix
     ./plasma-manager.nix
   ];
