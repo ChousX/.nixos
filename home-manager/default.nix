@@ -103,7 +103,7 @@
       enableCompletion = true;
       autosuggestion = {
         enable = true;
-        strategy = ["completion"]
+        strategy = ["completion"];
       };
       autocd = true;
       syntaxHighlighting.enable = true;
