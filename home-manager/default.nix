@@ -33,7 +33,6 @@
       tldr
       aseprite
       unrar
-      filezilla
       alacritty
     ];
     file = {
