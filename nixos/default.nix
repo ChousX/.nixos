@@ -15,7 +15,6 @@
     ./ssh.nix
     ./zsh.nix
     ./fonts.nix
-    ./firefox.nix
   ];
 
   xdg.portal.enable = true;

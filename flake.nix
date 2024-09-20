@@ -22,12 +22,6 @@
       url = "github:rebelot/kanagawa.nvim";
       flake = false;
     };
-
-    #NightlyFirefox
-    firefox = {
-      url = "github:nix-community/flake-firefox-nightly";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = {
