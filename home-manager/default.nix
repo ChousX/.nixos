@@ -20,7 +20,6 @@
     stateVersion = "23.11"; # Please read the comment before changing.
     packages = with pkgs; [
       signal-desktop
-      wezterm
       vlc
       git-credential-manager
       discord
@@ -102,12 +101,22 @@
     zsh = {
       enable = true;
       enableCompletion = true;
+      enableAutosuggestions = true;
       autosuggestion.enable = true;
+      autocd = true;
       syntaxHighlighting.enable = true;
       shellAliases = {
         bevy-init = "nix flake new --template ~/Templates#rust-bevy . && sh init.sh";
         v = "nvim";
+        ip = "ip --color=auto";
       };
+    };
+
+    skim = {
+      enable = true;
+      enableZshIntegration = true;
+      enableFishIntegration = false;
+      enableBashIntegration = false;
     };
 
     ranger = {
