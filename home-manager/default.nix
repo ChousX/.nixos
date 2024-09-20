@@ -101,8 +101,10 @@
     zsh = {
       enable = true;
       enableCompletion = true;
-      enableAutosuggestions = true;
-      autosuggestion.enable = true;
+      autosuggestion = {
+        enable = true;
+        strategy = ["completion"]
+      };
       autocd = true;
       syntaxHighlighting.enable = true;
       shellAliases = {
