@@ -1,8 +1,12 @@
 {pkgs, ...} : {
 
-fonts.fontconfig.enable = true;
-home.packages = with pkgs; [
-  (nerdfonts.override { fonts = ["OpenDyslexic"];})
+fonts = {
+  enableDefaultPackages = true;
+  packages = with pkgs; [
+    (nerdfonts.override { fonts = ["OpenDyslexic"];})
   ];
-}
+  fontconfig = {
+    enable = true;
+  };
+};
         
