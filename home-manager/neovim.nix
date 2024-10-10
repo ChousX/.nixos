@@ -180,6 +180,7 @@
       rust-analyzer
       cargo
       lldb
+      macdylibbundler
     ];
   };
 }
