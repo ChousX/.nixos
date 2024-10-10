@@ -12,10 +12,10 @@
       wallpaper = "${pkgs.kdePackages.plasma-workspace-wallpapers}/share/wallpapers/Patak/contents/images/1080x1920.png";
     };
 
-    hotkeys.commands."launch-wezterm" = {
-      name = "Launch WezTerm";
+    hotkeys.commands."launch-alacritty" = {
+      name = "Launch Alacritty";
       key = "Meta+Enter";
-      command = "wezterm";
+      command = "alacritty";
     };
 
     panels = [

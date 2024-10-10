@@ -3,6 +3,7 @@
   nixpkgs.overlays = [
     outputs.overlays.nvimPlugins
   ];
+ 
   programs.neovim = 
   let 
     toLua = str: "lua << EOF\n${str}\nEOF\n";
@@ -179,6 +180,7 @@
       rust-analyzer
       cargo
       lldb
+      dylibbundler
     ];
   };
 }
