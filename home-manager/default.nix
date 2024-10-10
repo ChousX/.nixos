@@ -32,6 +32,8 @@
       aseprite
       unrar
       alacritty
+
+      macdylibbundler
     ];
     file = {
       ".emacs.d".source = ./configs/emacs;
