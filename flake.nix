@@ -10,6 +10,9 @@
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    # Doom Emacs
+    nix-doom-emacs.url = "github:vlaci/nix-doom-emacs";
+
     # Plasma manager
     plasma-manager = {
       url = "github:nix-community/plasma-manager";
@@ -28,6 +31,7 @@
     self,
     nixpkgs,
     home-manager,
+    nix-doom-emacs,
     ...
   } @ inputs: let
       inherit (self) outputs;
@@ -75,6 +79,7 @@
             # > Our main home-manager configuration file <
             ./home-manager
             inputs.plasma-manager.homeManagerModules.plasma-manager
+            nix-doom-emacs.hmModule
           ];
         };
       };

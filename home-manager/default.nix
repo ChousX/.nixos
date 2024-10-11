@@ -1,4 +1,4 @@
-{ config, outputs, pkgs, ... }:
+{ config, outputs, pkgs, nix-doom-emacs, ... }:
 {
   nixpkgs = {
     overlays =  [
@@ -34,7 +34,9 @@
       alacritty
     ];
     file = {
-      ".emacs.d".source = ./configs/emacs;
+      ".config/doom.d/init.el".text = ''
+          (load "default.el")
+      ''
       ".config/alacritty".source = ./configs/alacritty;
     };
     sessionVariables = {
@@ -59,6 +61,11 @@
 	      co = "checkout";
 	      cm = "commit -a -m";
       };
+    };
+    
+    doom-emacs = {
+        enable = true;
+        doomPrivateDir = ~/.config/doom.d;
     };
 
     emacs = {
