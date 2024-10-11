@@ -36,7 +36,7 @@
     file = {
       ".config/doom.d/init.el".text = ''
           (load "default.el")
-      ''
+      '';
       ".config/alacritty".source = ./configs/alacritty;
     };
     sessionVariables = {
