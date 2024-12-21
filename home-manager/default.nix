@@ -29,7 +29,6 @@
       ripgrep
       dust
       tldr
-      aseprite
       unrar
       alacritty
     ];
