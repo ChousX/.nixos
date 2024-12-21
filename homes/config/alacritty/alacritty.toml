@@ -1,0 +1,13 @@
+[window]
+opacity = 0.9
+
+padding.x = 10
+padding.y = 0
+
+decorations = "Full"
+decorations_theme_variant = "Dark"
+
+
+[font]
+normal = {family = "OpenDyslexicM Nerd Font Mono", style = "Regular"}
+size = 13.0
