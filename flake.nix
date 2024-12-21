@@ -1,87 +1,51 @@
 {
-  description = "My Personal Use NixOs configuration";
+  description = "From Nothing. I Hope this is my last os flake";
 
   inputs = {
-    # Nixpkgs
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nur.url = "github:nix-community/NUR";
-
-    # Home manager
-    home-manager.url = "github:nix-community/home-manager/master";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
-
-    # Doom Emacs
-    nix-doom-emacs.url = "github:vlaci/nix-doom-emacs";
-
-    # Plasma manager
-    plasma-manager = {
-      url = "github:nix-community/plasma-manager";
+    home-manager = {
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
     };
-
-    #NeoVim
-    kanagawa-theme = {
-      url = "github:rebelot/kanagawa.nvim";
-      flake = false;
-    };
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
+    #nixtheplanet.url = "github:matthewcroughan/nixtheplanet";
+    stylix.url = "github:danth/stylix";
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    nix-doom-emacs,
-    ...
-  } @ inputs: let
-      inherit (self) outputs;
-      systems = [
+  outputs = {self, home-manager, nixpkgs, ...}@inputs:
+  let 
+    inherit (self) outputs;
+    forAllSystems = nixpkgs.lib.genAttrs [
         "aarch64-linux"
-        "i686-linux"
+        # "i686-linux"
         "x86_64-linux"
-        "aarch64-darwin"
-        "x86_64-darwin"
+        # "aarch64-darwin"
+        # "x86_64-darwin"
+      ];
+  in {
+    formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
+    nixosConfigurations = with nixpkgs.lib; {
+      desktop = nixosSystem {
+        specialArgs = { inherit inputs outputs; };
+        modules = [ 
+          ./hosts/desktop 
+          ./hosts/modules
+          inputs.stylix.nixosModules.stylix
         ];
-      forAllSystems = nixpkgs.lib.genAttrs systems;
-    in {
-      packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
-
-      formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
-
-      overlays = import ./overlays {inherit inputs;};
-
-      nixosModules = import ./modules/nixos;
-
-      homeManagerModules = import ./modules/home-manager;
-
-      nixosConfigurations = {
-        Oric = nixpkgs.lib.nixosSystem {
-          specialArgs = {inherit inputs outputs;};
-          modules = [
-            ./nixos/oric
-          ];
-        };
-
-        Vonwyn = nixpkgs.lib.nixosSystem {
-          specialArgs = {inherit inputs outputs;};
-          modules = [
-            ./nixos/vonwyn
-          ];
-        };
       };
-
-      # Standalone home-manager configuration entrypoint
-      homeConfigurations = {
-        chousx = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-          extraSpecialArgs = {inherit inputs outputs;};
-          modules = [
-            # > Our main home-manager configuration file <
-            ./home-manager
-            inputs.plasma-manager.homeManagerModules.plasma-manager
-            nix-doom-emacs.hmModule
-          ];
-        };
+      #laptop = nixosSystem {
+        #specialArgs = { inherit inputs outputs; };
+        #modules = [ ./hosts/laptop ];
+      #};
+    };
+    homeConfigurations = {
+      "chousx@base-camp" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux.pkgs;
+        extraSpecialArgs = { inherit inputs outputs;};
+        modules = [
+          ./homes/chousx/base-camp.nix 
+        ];
       };
     };
+  };
 }
