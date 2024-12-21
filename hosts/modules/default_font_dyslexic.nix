@@ -11,8 +11,8 @@
       	enable = true;
       	defaultFonts = {
           monospace = ["OpenDyslexicM Nerd Font Mono"];
-          sansSerif = ["OpenDyslexic Nerd Font"];
-          serif = ["OpenDyslexic Nerd Font"];
+          sansSerif = ["OpenDyslexicM Nerd Font"];
+          serif = ["OpenDyslexicM Nerd Font"];
 	      };
       };
     };
