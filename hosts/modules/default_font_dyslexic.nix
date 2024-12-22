@@ -5,14 +5,15 @@
       enableDefaultPackages = true;
       fontDir.enable = true;
       packages = with pkgs; [
+        nerd-fonts._0xproto
       	nerd-fonts.open-dyslexic
       ];
       fontconfig = {
       	enable = true;
       	defaultFonts = {
-          monospace = ["OpenDyslexicM Nerd Font Mono"];
-          sansSerif = ["OpenDyslexicM Nerd Font"];
-          serif = ["OpenDyslexicM Nerd Font"];
+          monospace = ["0xProto Nerd Font Mono"];
+          sansSerif = ["OpenDyslexic Nerd Font"];
+          serif = ["OpenDyslexic Nerd Font"];
 	      };
       };
     };

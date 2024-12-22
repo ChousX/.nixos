@@ -9,5 +9,5 @@ decorations_theme_variant = "Dark"
 
 
 [font]
-normal = {family = "OpenDyslexicM Nerd Font Mono", style = "Regular"}
+normal = {family = "0xProto Nerd Font Mono", style = "Regular"}
 size = 13.0
