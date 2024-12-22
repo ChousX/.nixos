@@ -1,9 +1,10 @@
-{lib, config, ...}: with lib;{
+{lib, config, pkgs, ...}: with lib;{
   options.m.hyperland.enable = mkEnableOption "Does Nothing as of now :p";
   config = mkIf config.m.hyperland.enable {
-      
-
       wayland.windowManager.hyprland = {
+        plugins = [
+          inputs.hyprgrass.packages.${pkgs.system}.default
+        ];
         enable = true; # enable Hyprland
         settings = {
           "$mod" = "SUPER";

@@ -10,6 +10,11 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
     #nixtheplanet.url = "github:matthewcroughan/nixtheplanet";
     stylix.url = "github:danth/stylix";
+    hyprland.url = "github:hyprwm/Hyprland";
+    hyprgrass = {
+      url = "github:horriblename/hyprgrass";
+      inputs.hyprland.follows = "hyprland";
+    };
   };
 
   outputs = {self, home-manager, nixpkgs, ...}@inputs:

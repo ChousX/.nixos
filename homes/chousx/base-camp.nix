@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   imports = [./home.nix];
   home.packages = with pkgs; [
-    firefox
+    firefox-wayland
     terminator
     discord
   ];
