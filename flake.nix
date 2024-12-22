@@ -10,12 +10,9 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
     #nixtheplanet.url = "github:matthewcroughan/nixtheplanet";
     stylix.url = "github:danth/stylix";
-
-    #optimize settings for different hardware
-    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
-  outputs = {self, home-manager, nixpkgs, nixos-hardware, ...}@inputs:
+  outputs = {self, home-manager, nixpkgs, ...}@inputs:
   let 
     inherit (self) outputs;
     forAllSystems = nixpkgs.lib.genAttrs [
@@ -47,7 +44,6 @@
         extraSpecialArgs = { inherit inputs outputs;};
         modules = [
           ./homes/chousx/base-camp.nix 
-          nixos-hardware.nixosModules.dell-xps-15-9550
         ];
       };
     };
