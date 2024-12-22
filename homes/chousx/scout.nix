@@ -4,6 +4,7 @@
     firefox
     terminator
     discord
+    ranger
   ];
   m = {
     terminal.alacritty.enable  = true;

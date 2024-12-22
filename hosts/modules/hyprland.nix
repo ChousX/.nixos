@@ -3,8 +3,6 @@
   config = mkIf config.m.hyprland.enable {
       programs.hyprland = {
         enable = true;
-        #TODO: if nvidia 
-        nvidiaPatches = true;
         xwayland.enable = true;
       };
       xdg.portal.extraPortals = [
