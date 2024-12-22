@@ -1,7 +1,7 @@
 {inputs, config, lib, outputs, ...}: with lib; {
   options.m.basic_system.enable = mkEnableOption "the basic system stuff I always want";
   config = mkIf config.m.basic_system.enable {
-    services.flatpak.enable = true;
+    #services.flatpak.enable = true;
     home-manager = {
     useUserPackages = true;
     extraSpecialArgs = {inherit inputs outputs;};
