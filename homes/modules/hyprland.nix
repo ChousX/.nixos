@@ -1,10 +1,10 @@
-{lib, config, pkgs, ...}: 
+{lib, config, pkgs, inputs, ...}: 
 
 with lib;{
-  options.m.hyperland.enable = mkEnableOption "Does Nothing as of now :p";
-  config = mkIf config.m.hyperland.enable {
+  options.m.hyprland.enable = mkEnableOption "Does Nothing as of now :p";
+  config = mkIf config.m.hyprland.enable {
     home.packages = with pkgs;[
-      rofi
+      rofi-wayland
       brightnessctl
       wireplumber
       rofi-wayland
@@ -13,12 +13,15 @@ with lib;{
       grim
       slurp
       imagemagick
+
+      kitty
     ];
     wayland.windowManager.hyprland = {
       plugins = [
         inputs.hyprgrass.packages.${pkgs.system}.default
       ];
       enable = true; # enable Hyprland
+      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
       settings = 
       let 
         grim = pkgs.grim + "/bin/grim";

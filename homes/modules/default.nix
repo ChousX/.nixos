@@ -3,7 +3,7 @@
     ./shells
     #./firefox.nix
     ./git.nix
-    ./hyperland.nix
+    ./hyprland.nix
     ./plasma-manager.nix
     ./rofi.nix
     ./terminals

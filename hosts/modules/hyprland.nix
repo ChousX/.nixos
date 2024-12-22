@@ -7,10 +7,14 @@
         package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
         portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
       };
+      networking.networkmanager.enable = true;
       xdg.portal.extraPortals = [
         pkgs.xdg-desktop-portal-gtk
       ];
       # Optional, hint Electron apps to use Wayland:
+      environment.systemPackages = with pkgs;[
+        kitty
+      ];
       environment.sessionVariables.NIXOS_OZONE_WL = "1";
   };
 }
