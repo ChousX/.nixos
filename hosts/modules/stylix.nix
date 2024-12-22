@@ -1,9 +1,10 @@
 {pkgs, config, lib, ...}: with lib;{
   options.m.stylix.enable = mkEnableOption "enables stylix: a package that rices your system";
   config = mkIf config.m.stylix.enable {
+
     stylix = {
       cursor = {
-        package = pkgs.bibata-cursor;
+        package = pkgs.bibata-cursors;
         name = "Bibata-Modern-Ice";
       };
       fonts = {

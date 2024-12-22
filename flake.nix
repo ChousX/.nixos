@@ -16,7 +16,7 @@
   let 
     inherit (self) outputs;
     forAllSystems = nixpkgs.lib.genAttrs [
-        "aarch64-linux"
+        # "aarch64-linux"
         # "i686-linux"
         "x86_64-linux"
         # "aarch64-darwin"
@@ -33,10 +33,14 @@
           inputs.stylix.nixosModules.stylix
         ];
       };
-      #laptop = nixosSystem {
-        #specialArgs = { inherit inputs outputs; };
-        #modules = [ ./hosts/laptop ];
-      #};
+      laptop = nixosSystem {
+        specialArgs = { inherit inputs outputs; };
+        modules = [ 
+          ./hosts/modules
+          ./hosts/laptop 
+          inputs.stylix.nixosModules.stylix
+        ];
+      };
     };
     homeConfigurations = {
       "chousx@base-camp" = home-manager.lib.homeManagerConfiguration {
