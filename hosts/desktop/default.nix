@@ -11,6 +11,7 @@
   m = {
     basic_system.enable = true;
     bluetooth.enable = true;
+    flatpak.enable = true;
     shell.zsh.enable = true;
     kdePlasma6.enable = true;
     sddm.enable = true;
