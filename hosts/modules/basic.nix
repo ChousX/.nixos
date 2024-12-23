@@ -3,6 +3,7 @@
   config = mkIf config.m.basic_system.enable {
     #services.flatpak.enable = true;
     home-manager = {
+    backupFileExtension = "backup";
     useUserPackages = true;
     extraSpecialArgs = {inherit inputs outputs;};
     };

@@ -8,6 +8,6 @@
   ];
   m = {
     terminal.alacritty.enable  = true;
-    hyprland.enable  = true;
+    hyprland_config.enable  = true;
   };
 }
