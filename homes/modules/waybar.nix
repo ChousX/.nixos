@@ -5,9 +5,9 @@
       packages = with pkgs; [
         waybar
       ];
-      file = {
-        ".config/waybar".source = ../../config/waybar;
-      };
+      #file = {
+        #".config/waybar".source = ../../config/waybar;
+      #};
     };
   };
 }
