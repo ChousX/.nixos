@@ -8,5 +8,6 @@
     ./rofi.nix
     ./terminals
     ./protonGE.nix
+    ./waybar.nix
   ];
 }

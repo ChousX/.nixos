@@ -6,7 +6,6 @@
     ../../users/chousx.nix
     inputs.home-manager.nixosModules.home-manager
   ];
-
   networking.networkmanager.enable = true;
   m = {
     basic_system.enable = true;

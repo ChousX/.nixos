@@ -9,5 +9,6 @@
   m = {
     terminal.alacritty.enable  = true;
     hyprland_config.enable  = true;
+    waybar.enable = true;
   };
 }
