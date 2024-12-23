@@ -9,5 +9,6 @@
     ./terminals
     ./protonGE.nix
     ./waybar.nix
+    ./hyprpaper.nix
   ];
 }
