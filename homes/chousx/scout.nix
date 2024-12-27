@@ -4,9 +4,12 @@
     firefox-wayland
     terminator
     discord
+    ranger
   ];
   m = {
     terminal.alacritty.enable  = true;
-    terminal.kitty.enable  = true;
+    hyprland_config.enable  = true;
+    hyprpaper.enable = true;
+    waybar.enable = true;
   };
 }

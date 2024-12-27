@@ -1,8 +1,9 @@
-{inputs, config, lib, ...}: with lib; {
+{inputs, config, lib, outputs, ...}: with lib; {
   options.m.basic_system.enable = mkEnableOption "the basic system stuff I always want";
   config = mkIf config.m.basic_system.enable {
-    services.flatpak.enable = true;
+    #services.flatpak.enable = true;
     home-manager = {
+    backupFileExtension = "backup";
     useUserPackages = true;
     extraSpecialArgs = {inherit inputs outputs;};
     };
@@ -12,6 +13,8 @@
     nix = {
       settings = {
         experimental-features = "nix-command flakes";
+        substituters = ["https://hyprland.cachix.org"];
+        trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
         trusted-users = [
           "root"
           "chousx"

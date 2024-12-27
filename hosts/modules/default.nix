@@ -3,6 +3,8 @@
     ./basic.nix
     ./bluetooth.nix
     ./default_font_dyslexic.nix
+    ./flatpak.nix
+    ./hyprland.nix
     ./sddm.nix
     ./kde.nix
     ./localizations
